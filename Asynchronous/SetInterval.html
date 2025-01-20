@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <h1>setInterval</h1>
+    <p>Check your console for updates every 2 seconds.</p>
+
+    <script>
+        let count = 0;
+
+        // Set interval to execute every 2000ms (2 seconds)
+        const intervalId = setInterval(() => {
+            count++;
+            console.log(`This is message number ${count}`);
+            
+            // Stop the interval after 10 seconds (5 iterations)
+            if (count === 5) {
+                clearInterval(intervalId);
+                console.log("Interval stopped after 5 messages.");
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
